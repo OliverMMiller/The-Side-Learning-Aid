@@ -19,7 +19,7 @@ lineTravel = 555 - startOffset
 
 totalTime = 12 #seconds
 
-FPS = int(lineTravel / totalTime) # frames per second
+FPS = 47#int(lineTravel // totalTime) # frames per second
 FramePerSec = pygame.time.Clock()
 
 countDownFrames = 3 # seconds
@@ -49,10 +49,6 @@ while __name__ == "__main__":
                 quitFunc()
             elif event.key == pygame.K_SPACE:
                   countDownFrames = FPS * 3 # seconds
-        elif event.type == pygame.WINDOWFOCUSGAINED:
-            FPS = 60
-        elif event.type == pygame.WINDOWFOCUSLOST:
-            FPS = 2
         elif event.type == pygame.WINDOWCLOSE:
             quitFunc()
 
